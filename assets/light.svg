@@ -1,0 +1,21 @@
+<svg viewBox="0 0 1180 610" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+  <radialGradient id="bg">
+    <stop offset="0%" stop-color="#F8FAFC"/>
+    <stop offset="100%" stop-color="#FFFFFF"/>
+  </radialGradient>
+
+  <linearGradient id="accent">
+    <stop offset="0%" stop-color="#2563EB"/>
+    <stop offset="100%" stop-color="#06B6D4"/>
+  </linearGradient>
+</defs>
+
+<rect width="1180" height="610" rx="24" fill="url(#bg)"/>
+
+<text x="100" y="200" font-size="40" fill="#0F172A">
+  Premium GitHub Banner
+</text>
+
+</svg>
