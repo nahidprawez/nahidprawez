@@ -1,0 +1,179 @@
+<svg viewBox="0 0 1180 610" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+  <!-- BG -->
+  <radialGradient id="bg">
+    <stop offset="0%" stop-color="#0B1220"/>
+    <stop offset="100%" stop-color="#030712"/>
+  </radialGradient>
+
+  <!-- ACCENT FLOW -->
+  <linearGradient id="accent">
+    <stop offset="0%" stop-color="#7C3AED">
+      <animate attributeName="stop-color"
+        values="#7C3AED;#22D3EE;#10B981;#7C3AED"
+        dur="10s" repeatCount="indefinite"/>
+    </stop>
+    <stop offset="100%" stop-color="#22D3EE"/>
+  </linearGradient>
+
+  <!-- ASCII GRADIENT -->
+  <linearGradient id="asciiGrad">
+    <stop offset="0%" stop-color="#22D3EE"/>
+    <stop offset="50%" stop-color="#7C3AED"/>
+    <stop offset="100%" stop-color="#22D3EE">
+      <animate attributeName="offset" values="0;1;0" dur="8s" repeatCount="indefinite"/>
+    </stop>
+  </linearGradient>
+
+  <!-- SHIMMER BORDER -->
+  <linearGradient id="border">
+    <stop offset="0%" stop-color="transparent"/>
+    <stop offset="50%" stop-color="#22D3EE"/>
+    <stop offset="100%" stop-color="transparent"/>
+    <animateTransform attributeName="gradientTransform"
+      type="translate" values="-1 0;1 0"
+      dur="4s" repeatCount="indefinite"/>
+  </linearGradient>
+
+  <!-- GLOW -->
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="3"/>
+  </filter>
+
+  <!-- NOISE -->
+  <filter id="noise">
+    <feTurbulence baseFrequency="0.8" numOctaves="2"/>
+    <feComponentTransfer>
+      <feFuncA type="linear" slope="0.03"/>
+    </feComponentTransfer>
+  </filter>
+
+  <!-- SCAN -->
+  <linearGradient id="scan">
+    <stop offset="0%" stop-color="transparent"/>
+    <stop offset="50%" stop-color="rgba(255,255,255,0.06)"/>
+    <stop offset="100%" stop-color="transparent"/>
+  </linearGradient>
+</defs>
+
+<!-- BACKGROUND -->
+<rect width="1180" height="610" rx="24" fill="url(#bg)"/>
+
+<!-- PARTICLES -->
+<g opacity="0.15">
+  <circle cx="150" cy="120" r="2" fill="#22D3EE">
+    <animateTransform type="translate" values="0 0;0 40;0 0" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1000" cy="450" r="2" fill="#7C3AED">
+    <animateTransform type="translate" values="0 0;0 -50;0 0" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="200" r="1.5" fill="#10B981">
+    <animateTransform type="translate" values="0 0;0 30;0 0" dur="6s" repeatCount="indefinite"/>
+  </circle>
+</g>
+
+<!-- LEFT ASCII PANEL -->
+<g transform="translate(40,60)">
+  <rect width="420" height="500" rx="20" fill="#0F172A" opacity="0.65"/>
+  <rect width="420" height="500" rx="20" fill="none" stroke="url(#border)"/>
+
+  <!-- ASCII PORTRAIT -->
+  <g transform="translate(20,80)">
+    <text font-family="monospace" font-size="14" fill="url(#asciiGrad)" filter="url(#glow)">
+      <tspan opacity="0">███████╗
+        <animate attributeName="opacity" dur="0.3s" begin="0s" to="1" fill="freeze"/>
+      </tspan>
+      <tspan x="0" dy="18" opacity="0">██╔════╝
+        <animate attributeName="opacity" dur="0.3s" begin="0.2s" to="1" fill="freeze"/>
+      </tspan>
+      <tspan x="0" dy="18" opacity="0">█████╗
+        <animate attributeName="opacity" dur="0.3s" begin="0.4s" to="1" fill="freeze"/>
+      </tspan>
+      <tspan x="0" dy="18" opacity="0">██╔══╝
+        <animate attributeName="opacity" dur="0.3s" begin="0.6s" to="1" fill="freeze"/>
+      </tspan>
+      <tspan x="0" dy="18" opacity="0">███████╗
+        <animate attributeName="opacity" dur="0.3s" begin="0.8s" to="1" fill="freeze"/>
+      </tspan>
+    </text>
+  </g>
+
+  <!-- FLOAT -->
+  <animateTransform attributeName="transform"
+    type="translate"
+    values="40,60;40,50;40,60"
+    dur="6s" repeatCount="indefinite"/>
+
+  <!-- SCANLINE -->
+  <rect width="420" height="500" fill="url(#scan)">
+    <animateTransform type="translate" values="0 -500;0 500" dur="5s" repeatCount="indefinite"/>
+  </rect>
+</g>
+
+<!-- RIGHT PANEL -->
+<g transform="translate(500,60)">
+  <rect width="640" height="500" rx="20" fill="#0F172A" opacity="0.7"/>
+  <rect width="640" height="500" rx="20" fill="none" stroke="url(#border)"/>
+
+  <!-- HEADER -->
+  <text x="40" y="80" fill="#F8FAFC" font-size="30">Hi 👋</text>
+  <text x="40" y="120" fill="#F8FAFC" font-size="36">I'm Nahid</text>
+
+  <!-- ROLE LOOP -->
+  <text x="40" y="170" fill="#22D3EE" font-size="20" font-family="monospace">
+    <tspan opacity="1">Frontend Engineer</tspan>
+    <animate attributeName="opacity" values="1;0;0;1" dur="8s" repeatCount="indefinite"/>
+  </text>
+  <text x="40" y="170" fill="#22D3EE" font-size="20" font-family="monospace">
+    <tspan opacity="0">Full Stack Developer</tspan>
+    <animate attributeName="opacity" values="0;1;0;0" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- INFO -->
+  <g fill="#94A3B8" font-size="15">
+    <text x="40" y="220" opacity="0">
+      📍 India
+      <animate attributeName="opacity" to="1" begin="1s" fill="freeze"/>
+    </text>
+    <text x="40" y="250" opacity="0">
+      🎓 Computer Science
+      <animate attributeName="opacity" to="1" begin="1.2s" fill="freeze"/>
+    </text>
+    <text x="40" y="280" opacity="0">
+      🚀 Building AI Tools
+      <animate attributeName="opacity" to="1" begin="1.4s" fill="freeze"/>
+    </text>
+  </g>
+
+  <!-- SKILLS GRID -->
+  <g transform="translate(40,330)" font-size="13">
+    <g>
+      <rect width="90" height="30" rx="14" fill="url(#accent)">
+        <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="20" y="20" fill="#fff">React</text>
+    </g>
+
+    <g transform="translate(110,0)">
+      <rect width="110" height="30" rx="14" fill="url(#accent)"/>
+      <text x="15" y="20" fill="#fff">Next.js</text>
+    </g>
+
+    <g transform="translate(240,0)">
+      <rect width="110" height="30" rx="14" fill="url(#accent)"/>
+      <text x="20" y="20" fill="#fff">TypeScript</text>
+    </g>
+  </g>
+
+  <!-- CURSOR -->
+  <rect x="300" y="155" width="10" height="20" fill="#22D3EE">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+</g>
+
+<!-- NOISE -->
+<rect width="1180" height="610" filter="url(#noise)" opacity="0.2"/>
+
+</svg>
