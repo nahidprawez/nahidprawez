@@ -104,7 +104,7 @@
 ## 🐍 Contribution Snake
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/nahidprawez/nahidprawez/output/snake.svg" />
+  <img src="https://raw.githubusercontent.com/nahidprawez/nahidprawez/output/github-contribution-grid-snake.svg" />
 </p>
 
 ---
